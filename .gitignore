@@ -1,0 +1,24 @@
+# Local tooling and agent data
+.agents/
+.codex/
+.idea/
+.vscode/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local packaging tools and outputs
+Addon_pack.vbs
+*.zip
+dist/
+build/
+
+# Temporary and backup files
+*.log
+*.tmp
+*.bak
+*.blend1
+*.blend2
+Thumbs.db
+.DS_Store
