@@ -1,99 +1,95 @@
 # YL CameraRef
 
-YL CameraRef 是一款面向 Blender 的摄像机参考图工具，将从当前视图创建摄像机、按摄像机管理参考图、视口内直接调整和构图辅助集中到一个紧凑的工作流中。
+YL CameraRef is a camera reference image tool for Blender. It brings camera creation from the current view, per-camera reference image management, direct viewport adjustments, and composition utilities together in one compact workflow.
 
-每个摄像机视图都可以拥有独立的多张参考图，并支持在不同视图与参考图之间快速切换，适合用于场景搭建、白模搭建、建模和画面对位。
+Each camera view can have its own collection of reference images. You can quickly switch between different camera views and reference images, making it useful for scene layout, blockouts, modeling, and visual alignment.
 
-### ✨ 使用 YL CameraRef，你可以：
+### ✨ With YL CameraRef, you can:
 
-- 📷 从当前视图快速创建摄像机，支持透视和正交视图
-- 🖼️ 为不同摄像机添加和管理各自独立的参考图
-- 🔄 在同一摄像机中快速添加、切换、替换或复制多张参考图
-- ✋ 直接在摄像机视图中直接移动、缩放和旋转参考图，所见即所得
-- 👁️ 快速控制参考图的不透明度、可见性以及前方/后方显示层级
-- 📐 调整物体的空间深度，同时保持它在摄像机画面中的构图不变
-- 🎥 推拉摄像机，并通过希区柯克变焦保持所选主体的画面大小
-
----
-
-## 多语言支持
-
-- 支持 English、简体中文、繁體中文、日本語、한국어、Deutsch、Français、Español、Italiano、Polski、Português、Русский 和 Tiếng Việt。
+- 📷 Quickly create a camera from the current view, supporting both perspective and orthographic views
+- 🖼️ Add and manage independent reference images for different cameras
+- 🔄 Quickly add, switch, replace, or duplicate multiple reference images on the same camera
+- ✋ Move, scale, and rotate reference images directly in the camera view with immediate visual feedback
+- 👁️ Quickly control reference image opacity, visibility, and front/back display depth
+- 📐 Adjust an object's depth while preserving its composition in the camera frame
+- 🎥 Dolly the camera and use Dolly Zoom to preserve the selected subject's size in the frame
 
 ---
 
-## 核心功能
+## Language Support
 
-### 1. 📷 从当前视图快速创建摄像机
+- Supports English, 简体中文, 繁體中文, 日本語, 한국어, Deutsch, Français, Español, Italiano, Polski, Português, Русский, and Tiếng Việt.
 
-- 无论当前处于透视视图还是正交视图，都可以直接从当前视角创建摄像机。摄像机会匹配当前视图的构图，创建后直接进入摄像机视图，所见即所得。（也可通过 `Shift+A` 菜单快速添加）
+---
 
-- 适合在浏览场景、寻找构图或完成视角对位后，快速保存当前画面。
-- 
+## Core Features
+
+### 1. 📷 Quickly Create a Camera from the Current View
+
+- Whether you are in a perspective or orthographic view, you can create a camera directly from the current viewpoint. The new camera matches the current view and immediately enters camera view, giving you exactly what you see. You can also quickly add one from the `Shift+A` menu.
+
+- This is useful for quickly saving the current composition after navigating the scene, finding a suitable angle, or completing viewpoint alignment.
+
 <img width="800" height="450" alt="添加" src="https://github.com/user-attachments/assets/987f002d-9e4f-463c-9d3b-b8596aec3c8a" />
 
 
-### 2. 🖼️ 快速切换摄像机与直接调整参考图
+### 2. 🖼️ Quickly Switch Cameras and Directly Adjust Reference Images
 
-#### 2.1 📷 切换摄像机与参考图工作区
+#### 2.1 Switch Cameras and Reference Image Workspaces
 
-- 可通过列表快速切换不同摄像机，并直接进入对应的摄像机视图。每台摄像机都保留独立的多张参考图、当前参考图和显示设置，方便在多个视角之间快速对照与工作。
+- Quickly switch between cameras from the list and immediately enter the corresponding camera view. Each camera retains its own collection of reference images, active reference image, and display settings, making it easy to switch between and compare multiple viewpoints.
 
 <img width="800" height="450" alt="切换图" src="https://github.com/user-attachments/assets/bdfb3cec-1b24-46d1-8e04-003f555aee1b" />
 
 
-#### 2.2 ✋ 直接调整参考图
+#### 2.2 Directly Adjust Reference Images
 
-- 点击“调整”后，直接在摄像机画面中拖拽参考图即可移动、缩放和旋转。支持 X/Y 锁轴、精细调整和吸附，全程不需要输入任何参数，所见即所得。
+- After clicking “Adjust,” you can move, scale, and rotate the reference image directly in the camera view. X/Y axis locking, fine adjustments, and snapping are supported. No numerical input is required, and every adjustment is shown directly in the viewport.
 
-- 可快速控制参考图的不透明度、可见性以及前方/后方显示层级。
 
 <img width="800" height="450" alt="adjust" src="https://github.com/user-attachments/assets/652f04db-5b0e-4df7-a237-76328a49087a" />
 
 
-### 3. 🧰 CameraRef 工具
+### 3. 🧰 CameraRef Tools
 
-CameraRef 工具是一组围绕摄像机构图和参考图对位设计的辅助功能。默认可以隐藏，需要时再单独开启。
+CameraRef Tools is a collection of utilities designed around camera composition and reference image alignment. It is hidden by default and can be enabled whenever needed.
 
-#### 3.1 🎛️ 标题栏不透明度控制
+#### 3.1 Header Opacity Control
 
-- 可将参考图不透明度控件显示在 3D 视图标题栏中，不打开N面板也能随时调整参考图透明度。
+- Display the reference image opacity control in the 3D View header, allowing you to adjust reference image transparency at any time without opening the CameraRef panel.
 
 <img width="800" height="450" alt="快速按钮" src="https://github.com/user-attachments/assets/0eb3e644-44cb-4585-909c-1857a943ba2a" />
 
 
-#### 3.2 📐 调整物体深度并保持构图（仅支持透视摄像机）
+#### 3.2 Adjust Object Depth While Preserving Composition (Perspective Cameras Only; Select a Target Mesh First)
 
-- 在透视摄像机视图中调整所选物体的前后深度时，物体在摄像机画面中的显示保持不变，可快速调整场景层级与遮挡关系。
+- In a perspective camera view, adjust the selected object's forward or backward depth while keeping its appearance in the camera frame unchanged. This makes it easier to adjust scene depth and occlusion relationships.
 
 <img width="800" height="450" alt="物体不变" src="https://github.com/user-attachments/assets/b8d18083-4add-4e21-a131-02b53423eff7" />
 
-#### 3.3 🎥 摄像机推拉与希区柯克变焦（仅支持透视摄像机；希区柯克变焦前需选择物体）
+#### 3.3 Camera Dolly and Dolly Zoom (Perspective Cameras Only; Select a Target Mesh Before Using Dolly Zoom)
 
-- 默认状态下摄像机推拉可让当前摄像机沿观察轴快速前后移动，用于调整摄像机与场景之间的距离。
+- By default, the current camera can be moved forward or backward along its viewing axis to adjust the distance between the camera and the scene.
 
-- 开启“希区柯克变焦”后，推拉摄像机时会自动补偿焦距，让所选主体在画面中的位置和大小保持不变，同时获得希区柯克变焦效果。
+- When “Dolly Zoom” is enabled, the focal length is automatically compensated while the camera moves, keeping the selected subject's position and size unchanged in the frame to create a Hitchcock zoom effect.
 
 <img width="800" height="450" alt="希区柯克" src="https://github.com/user-attachments/assets/77f67e45-a8d5-42d8-a634-2856a73fe5a5" />
 
-#### 3.4 ⚙️ 构图与输出快捷工具
+#### 3.4 ⚙️ Composition and Output Utilities
 
-- CameraRef 工具还集中提供摄像机 Shift X/Y 和匹配参考图分辨率等常用快捷控制。
+- CameraRef Tools also provides convenient controls for camera Shift X/Y and matching the render resolution to the reference image resolution.
 - 
 <img width="723" height="732" alt="QQ20260719-114717" src="https://github.com/user-attachments/assets/9842c64f-d5a1-4f32-ac53-914972f0a61d" />
 
 ---
 
-## 开始使用
+## Getting Started
 
-- 安装并启用 `YL CameraRef`。
-- 在 3D 视图中按 `N` 打开侧栏，进入 `YL CameraRef` 选项卡。
-- 选择已有摄像机，或从当前视图快速创建摄像机。
-- 添加参考图后，即可进行切换、显示控制或视口内直接调整。
-- 如需深度、推拉和构图辅助功能，可开启 `CameraRef 工具`。
+- Install and enable `YL CameraRef`.
+- Press `N` in the 3D View to open the sidebar, then select the `YL CameraRef` tab.
 
 ---
 
-## 许可证
+## License
 
-- 本插件采用 `GPL-3.0-or-later` 许可证。
+- This add-on is licensed under `GPL-3.0-or-later`.
