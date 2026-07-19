@@ -44,19 +44,20 @@ Each camera view can have its own collection of reference images. You can quickl
 
 #### 2.2 Directly Adjust Reference Images
 
-- After clicking “Adjust,” you can move, scale, and rotate the reference image directly in the camera view. X/Y axis locking, fine adjustments, and snapping are supported. No numerical input is required, and every adjustment is shown directly in the viewport.
+- After clicking "Adjust," you can move, scale, and rotate the reference image directly in the camera view. X/Y axis locking, fine adjustments, and snapping are supported. No numerical input is required, and every adjustment is shown directly in the viewport.
 
+- If you start Adjust outside Camera View, YL CameraRef switches to the active camera view automatically. Leaving Camera View ends Adjust automatically.
 
 <img width="800" height="450" alt="adjust" src="https://github.com/user-attachments/assets/652f04db-5b0e-4df7-a237-76328a49087a" />
 
 
 ### 3. 🧰 CameraRef Tools
 
-CameraRef Tools is a collection of utilities designed around camera composition and reference image alignment. It is hidden by default and can be enabled whenever needed.
+CameraRef Tools is a compact set of camera composition and reference image utilities. It is collapsed by default and available whenever a camera is selected. Tools that require a reference image appear only after one is added.
 
-#### 3.1 Header Opacity Control
+#### 3.1 Header Opacity
 
-- Display the reference image opacity control in the 3D View header, allowing you to adjust reference image transparency at any time without opening the CameraRef panel.
+- Display the active reference image opacity control in the 3D View header, allowing you to adjust transparency without reopening the CameraRef panel.
 
 <img width="800" height="450" alt="快速按钮" src="https://github.com/user-attachments/assets/0eb3e644-44cb-4585-909c-1857a943ba2a" />
 
@@ -71,14 +72,14 @@ CameraRef Tools is a collection of utilities designed around camera composition 
 
 - By default, the current camera can be moved forward or backward along its viewing axis to adjust the distance between the camera and the scene.
 
-- When “Dolly Zoom” is enabled, the focal length is automatically compensated while the camera moves, keeping the selected subject's position and size unchanged in the frame to create a Hitchcock zoom effect.
+- When "Dolly Zoom" is enabled, the focal length is automatically compensated while the camera moves, keeping the selected subject's position and size unchanged in the frame to create a Hitchcock zoom effect.
 
 <img width="800" height="450" alt="希区柯克" src="https://github.com/user-attachments/assets/77f67e45-a8d5-42d8-a634-2856a73fe5a5" />
 
 #### 3.4 ⚙️ Composition and Output Utilities
 
-- CameraRef Tools also provides convenient controls for camera Shift X/Y and matching the render resolution to the reference image resolution.
-- 
+- CameraRef Tools also provides camera Shift X/Y and Use Reference Image Resolution, which sets the render resolution to the active reference image dimensions.
+
 <img width="723" height="732" alt="QQ20260719-114717" src="https://github.com/user-attachments/assets/9842c64f-d5a1-4f32-ac53-914972f0a61d" />
 
 ---
